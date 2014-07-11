@@ -62,7 +62,7 @@
 }
 
 /*fix the margin in toggel*/
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
 	#navbar-contact {
 		padding-left: 5px;
 		margin-left: 10px;
