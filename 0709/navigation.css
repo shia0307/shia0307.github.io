@@ -1,0 +1,49 @@
+
+ul{
+	display: inline-block;
+}
+li{
+	display: inline-block;
+}
+
+.nav-background {
+	background-color: rgba(255,255,255,0.95);
+	border-bottom: 1px solid #C3C3C3;
+	width: 100%;
+}
+
+.nav-list {
+	display: block;
+	padding: 23px 0 0 0;
+}
+
+/* Navigation link style*/
+.nav-list>ul>li>a {
+color: #555555;
+text-decoration: none;
+}
+.nav-list>ul>li>a:hover {
+border-bottom: 5px solid #B8F042;
+}
+
+.nav-list>ul>li>a:active {
+	color: #D5FBA2;
+}
+
+.nav-contact {
+	display: inline-block;
+	text-align: right;
+	text-decoration: none;
+	padding: 23px 0 0 0;
+}
+.nav-contact>a {
+	color: #8D8D8D;
+}
+.nav-contact>a:hover {
+	text-decoration: none;
+	color: #080808;
+}
+
+body#portfolio a#portfolionav {
+	border-bottom: 5px solid #B8F042;
+}

@@ -1,0 +1,10 @@
+
+body { 
+	padding-top: 70px; 
+}
+
+.center-block{
+	float: none;
+    margin: 0 auto;
+}
+
