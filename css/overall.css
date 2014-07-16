@@ -12,3 +12,7 @@ body {
 	float: none;
     margin: 0 auto;
 }
+
+::selection {
+	background-color: #F9D4E5;
+}

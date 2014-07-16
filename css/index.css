@@ -28,7 +28,7 @@ figure {
 
 figcaption { 
   position: absolute; 
-  background: rgba(0,0,0,0.75); 
+  background: rgba(0,0,0,0.5); 
   color: white; 
   padding: 10px 20px; 
 
@@ -61,15 +61,15 @@ figure:hover figcaption {
 	width: 930px;
 }
 
-
-
-
-
-
+/*Web Design*/
 #portfolio-web-design {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom : 10px;
+}
+#portfolio-web-design-cap {
+	padding: 10%;
+	width: 1074px;
 }
 
 #hitch-hiker {
