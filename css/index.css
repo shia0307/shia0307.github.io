@@ -19,13 +19,7 @@
 	padding-left: 10px;
 }
 
-#capstone {
-	padding-left: 5px;
-	padding-right: 5px;
-	margin-bottom : 10px;
-
-}
-
+/*Caption Style*/
 figure { 
   display: block; 
   position: relative; 
@@ -33,7 +27,6 @@ figure {
 }
 
 figcaption { 
-  width: 930px;
   position: absolute; 
   background: rgba(0,0,0,0.75); 
   color: white; 
@@ -52,8 +45,26 @@ figure:hover figcaption {
   left: 0;
 }
 
+/*Top Down Animation For Caption*/
 .cap-top figcaption { left: 0; top: -30%; }
 .cap-top:hover figcaption { top: 0; }
+
+/*Capstone project Thumbnail*/
+#capstone {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom : 10px;
+
+}
+
+#capstone-cap {
+	width: 930px;
+}
+
+
+
+
+
 
 #portfolio-web-design {
 	padding-left: 5px;
