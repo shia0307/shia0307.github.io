@@ -62,6 +62,10 @@
 	margin-left: 0;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #B8F042;
+}
+
 /*fix the margin in toggel*/
 @media all and (max-width: 768px) {
 	#navbar-contact {
