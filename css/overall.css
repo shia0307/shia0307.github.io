@@ -4,10 +4,6 @@
   }
 }
 
-body { 
-	 padding-top: 20px;
-}
-
 .center-block{
 	float: none;
     margin: 0 auto;
@@ -15,4 +11,18 @@ body {
 
 ::selection {
 	background-color: #F49DC3;
+}
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
