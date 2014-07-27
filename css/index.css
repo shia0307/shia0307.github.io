@@ -3,8 +3,13 @@ body {
 }
 
 .intro {
-	margin-top : 50px;
+	margin-top : 80px;
+	margin-bottom: 30px;
 	max-width : 940px;
+}
+
+#hello {
+	font-size: 26px;
 }
 
 .mhcid-link{
@@ -58,22 +63,22 @@ figure:hover figcaption {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom : 10px;
-
 }
-
 #capstone-cap {
-	width: 930px;
+	padding-top: 3%;
+	padding-left: 3%;
+	width: 420px;
 }
 
-/*Web Design*/
 #portfolio-web-design {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom : 10px;
 }
 #portfolio-web-design-cap {
-
-	width: 1074px;
+	padding-top: 5%;
+	padding-left: 5%;
+	width: 420px;
 }
 
 #hitch-hiker {
@@ -82,8 +87,8 @@ figure:hover figcaption {
 	margin-bottom : 10px;
 }
 #hitch-hiker-cap {
-	padding: 10%;
-	width: 1074px;
+	padding: 7%;
+	width: 420px;
 }
 
 #stream {
@@ -93,7 +98,7 @@ figure:hover figcaption {
 }
 #stream-cap {
 	padding: 10%;
-	width: 1074px;
+	width: 420px;
 }
 
 #eatwell {
@@ -103,7 +108,7 @@ figure:hover figcaption {
 }
 #eatwell-cap {
 	padding: 10%;
-	width: 1074px;
+	width: 420px;
 }
 
 #nudesign {
@@ -111,7 +116,10 @@ figure:hover figcaption {
 	padding-right: 5px;
 	margin-bottom : 10px;
 }
-
+#nudesign-cap {
+	padding: 10%;
+	width: 420px;
+}
 
 
 #fizzapron {
@@ -119,11 +127,19 @@ figure:hover figcaption {
 	padding-right: 5px;
 	margin-bottom : 10px;
 }
+#fizzapron-cap {
+	padding: 10%;
+	width: 410px;
+}
 
 #find-it {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom : 10px;
+}
+#find-it-cap {
+	padding: 10%;
+	width: 410px;
 }
 
 #dub-website {
@@ -131,11 +147,19 @@ figure:hover figcaption {
 	padding-right: 5px;
 	margin-bottom : 10px;
 }
+#dub-website-cap {
+	padding: 10%;
+	width: 410px;
+}
 
 #ttt {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom : 10px;
+}
+#ttt-cap {
+	padding: 10%;
+	width: 410px;
 }
 
 #hfb {
@@ -143,14 +167,28 @@ figure:hover figcaption {
 	padding-right: 5px;
 	margin-bottom : 10px;
 }
+#hfb-cap {
+	padding: 10%;
+	width: 410px;
+}
 
 #pencil {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom : 10px;
 }
+#pencil-cap {
+	padding: 10%;
+	width: 410px;
+}
+
 #more-portfolio {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom : 10px;
+}
+#more-portfolio-cap {
+	padding-top: 5%;
+	padding-left: 3%;
+	width: 930px;
 }

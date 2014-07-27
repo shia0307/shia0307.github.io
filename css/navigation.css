@@ -11,6 +11,7 @@
 
 /*navbar links padding bottom 15px>10px*/
 .navbar-nav>li>a{
+	font-family: Noto Sans;
 	padding-bottom: 10px;
 }
 
@@ -35,10 +36,14 @@
 .navbar-nav.navbar-right{
 		margin-left: 0px;
 	}
+#navbar-contact{
+	font-family: noto serif italic;
+	font-size: 11px;
+}
 
 @media all and (max-width: 1024px){
 	.navbar-default .navbar-nav>li>a {
-		margin: 0 10px 0 10px;
+		margin: 0 10px 0 30px;
 		padding: 15px 5px 10px 5px;
 	}
 	.nav.navbar-nav {
@@ -68,6 +73,9 @@
 
 /*fix the margin in toggel*/
 @media all and (max-width: 768px) {
+	.navbar-default .navbar-nav>li>a {
+		margin: 0 10px 0 10px;
+	}
 	#navbar-contact {
 		padding-left: 5px;
 		margin-left: 10px;
