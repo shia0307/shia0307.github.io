@@ -9,9 +9,14 @@ body {
 }
 
 #hello {
-	font-size: 26px;
+	font-size: 23px;
+	margin-bottom: 18px;
 }
 
+#im {
+	font-family: Open Sans Light;
+	font-size: 15px;
+}
 .mhcid-link{
 	text-decoration: none;
 	color: black;
@@ -20,12 +25,18 @@ body {
 	text-decoration: none;
 	color: #ED2A6E;
 }
-
+#hr{
+	margin-bottom: 10px;
+}
 .work-header {
 	margin-bottom: 30px;
 	margin-left: 10px;
 	border-left: solid 8px #B8F042;
 	padding-left: 10px;
+}
+#title {
+	font-family: Noto Sans;
+	font-size: 18px;
 }
 
 /*Caption Style*/
@@ -142,4 +153,8 @@ figure:hover figcaption {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom : 10px;
+}
+#more-portfolio-cap {
+	text-align: center;
+	width: 930px;
 }
