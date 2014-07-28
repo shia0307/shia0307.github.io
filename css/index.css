@@ -69,6 +69,12 @@ figure:hover figcaption {
   left: 0;
 }
 
+@media all and (max-width: 768px) {
+	figcaption{
+		visibility: hidden;
+	}
+}
+
 /*Top Down Animation For Caption*/
 .cap-top figcaption { left: 0; top: -30%; }
 .cap-top:hover figcaption { top: 0; }
@@ -160,8 +166,12 @@ figure:hover figcaption {
 }
 #more-portfolio-cap {
 	text-align: center;
+	padding-top: 5%;
+	padding-left: 2%;
 	width: 930px;
 }
+
+
 .footer-title {
 	color: #9BD325;
 	font-size: 13px;
