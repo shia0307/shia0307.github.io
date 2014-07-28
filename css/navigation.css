@@ -18,13 +18,13 @@
 /* Navigation bar links hover style*/
 .navbar-default .navbar-nav>li>a:hover {
 	color: #777;
-	border-bottom: 5px solid #B8F042;
+	border-bottom: 5px solid #B9E563;
 }
 
 /*Active link background style*/
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
 	background-color: rgba(255, 255, 255, 0);
-	border-bottom: 5px solid #B8F042;
+	border-bottom: 5px solid #B9E563;
 }
 
 /*Distance between logo and frist navigation links*/
@@ -68,7 +68,7 @@
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #B8F042;
+  background-color: #B9E563;
 }
 
 /*fix the margin in toggel*/
