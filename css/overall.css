@@ -2,7 +2,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Noto Sans;
 }
 p {
-	font-family: Noto Sans;
+	font-family: Open Sans Light;
+}
+.bigger-p{
+	font-size: 18px;
+}
+.no-padding {
+	padding: 0 0 0 0;
 }
 
 @media (min-width: 1200px) {
@@ -32,4 +38,10 @@ p {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+#copyright {
+	font-size: 11px;
+	margin: 30px 0 30px 0;
+	color: #8F8F8F;
 }

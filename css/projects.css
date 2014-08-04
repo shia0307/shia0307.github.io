@@ -1,0 +1,207 @@
+a {
+	font-family: Open Sans Italic;
+	text-decoration: none;
+	color: #FF53A0;
+}
+a:hover {
+	text-decoration: none;
+	color: #B9E563;
+}
+h2 {
+	font-family: Open Sans Light;
+	font-size: 27px;
+}
+
+.project-tagline {
+	padding-top: 100px;
+	text-align: center;
+	color: white;
+}
+
+.project-tagline>p {
+	font-family: Open Sans Light;
+	font-size: 18px;
+}
+
+.roles-responsibility {
+    margin-top: 30px;
+}
+.roles-responsibility>h3 {
+	border-left: solid 4px #B9E563;
+	margin-top: 0px;
+	font-family: Open Sans Semibold;
+	font-size: 15px;
+	padding-left: 8px;
+	margin-bottom: 10px;
+}
+.roles-responsibility>p {
+	padding-left: 13px;
+	font-size: 12px;
+}
+.roles-responsibility>a>p {
+	padding-left: 13px;
+	font-size: 12px;
+}
+.second-title {
+	border-left: 0px;
+	padding-left: 0px;
+	text-transform: uppercase;
+	margin-bottom: 23px;
+	font-family: Noto Sans;
+	font-size: 15px;
+}
+.video {
+	margin-top: 80px;
+}
+
+/*Stream*/
+.s-01 {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: url(../img/02-stream/stream-bg.png);
+}
+.s-03 #what-if{
+	color: #45BEAB;
+	font-family: Noto Serif Italic;
+	font-size: 23px; 
+	margin-top: 20px;
+}
+.s-03 .video {
+	margin-top: 30px;
+}
+/*Hitch Hiker*/
+/*hk-01*/
+.hk-01 {
+	padding-bottom: 50px;
+	background-image: url(../img/03-hk/hk-background.png);
+}
+.hk-summary {
+	padding-top: 100px;
+	text-align: center;
+	color: white;
+}
+
+.hk-summary>h1 {
+	font-family: Noto Sans Bold;
+	font-size: 38px;
+}
+.hk-summary>p {
+	font-family: Open Sans Light;
+	font-size: 18px;
+}
+
+.hk-03{
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+#hk-project-summary{
+	margin-bottom: 50px;
+}
+#hk-project-summary>h2 {
+	font-family: Open Sans Light;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#what-if {
+	color: #F9AD1A;
+	font-family: Noto Serif Italic;
+	font-size: 23px; 
+	margin-top: 50px;
+}
+
+.hk-04 {
+	padding-bottom: 100px;
+	text-align: center;
+}
+.timeline-title {
+	padding-top: 30px;
+}
+.timeline-text {
+	padding: 0 50px 0 50px;
+	margin: 20px 0 50px 0;
+}
+.hk-timeline {
+	padding: 0 10px 0 10px;
+}
+
+.hk-05 {
+	color: White;
+	padding: 100px 0 80px 0;
+	background-color: #4B4B4B;
+}
+#sketch-text {
+	margin-bottom: 20px;
+}
+
+.storyboard {
+	margin-top: 30px;
+}
+.storyboard-1, .storyboard-2{
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 30px;
+}
+
+.video-text {
+	padding-bottom: 20px;
+}
+.hk-06 {
+	background-color: #F8F8F8;
+	padding: 80px 0 100px 0;
+}
+
+.hk-mobile-text {
+	padding-top: 180px;
+	padding-bottom: 20px;
+}
+@media all and (max-width: 768px) {
+	.hk-mobile-text {
+	padding-top: 0;
+	text-align: center;
+}
+}
+.hk-07 {
+
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.gesture {
+	padding-bottom: 20px;
+}
+.hk-08 {
+	background-color: #F8F8F8;
+	padding: 100px 0 100px 0;
+}
+.testing-text {
+	padding-bottom: 30px;
+}
+.setup-text {
+	padding-top: 200px;
+	padding-bottom: 20px;
+}
+@media all and (max-width: 768px) {
+	.setup-text {
+	padding-top: 0;
+	text-align: center;
+}
+}
+
+.hk-09 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.hk-10 {
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+.result-text {
+	padding-bottom: 20px;
+}
+.result-quote {
+	padding-bottom: 10px;
+}
+.quote {
+	padding-top: 30px;
+}
