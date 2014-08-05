@@ -9,14 +9,16 @@ body {
 }
 
 #hello {
-	font-family: Noto Serif;
+	font-family: 'Noto Serif';
+	font-weight: 400;
 	font-size: 27px;
 	color: #404040;
 	margin-bottom: 18px;
 }
 
 #im {
-	font-family: Open Sans Light;
+	font-family: 'Open Sans'; 
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 23px;
 }
@@ -38,7 +40,8 @@ body {
 	padding-left: 10px;
 }
 #title {
-	font-family: Open Sans Semibold;
+	font-family: 'Open Sans';
+	font-weight: 600;
 	font-size: 18px;
 }
 
@@ -177,7 +180,9 @@ figure:hover figcaption {
 	font-size: 13px;
 }
 .footer-text {
-	font-family: Open Sans light Italic; 
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-style: italic; 
 	font-size: 13px;
 	color: #5D5D5D;
 }
@@ -191,7 +196,8 @@ hr {
 }
 
 .footer-link {
-	font-family: Open Sans Italic;
+	font-family: 'Open Sans';
+	font-style: italic;
 	text-decoration: none;
 	color: #FF53A0;
 }

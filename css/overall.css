@@ -1,8 +1,10 @@
 h1, h2, h3, h4, h5, h6 {
-	font-family: Noto Sans;
+	font-family: 'Noto Sans';
+	font-weight: 400;
 }
 p {
-	font-family: Open Sans Light;
+	font-family: 'Open Sans';
+	font-weight: 300;
 }
 .bigger-p{
 	font-size: 18px;

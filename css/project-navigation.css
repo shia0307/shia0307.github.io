@@ -15,7 +15,8 @@
 
 /*navbar links padding bottom 15px>10px*/
 .navbar-nav>li>a{
-	font-family: Noto Sans;
+	font-family: 'Noto Sans';
+	font-weight: 400;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
@@ -42,7 +43,9 @@
 		margin-left: 0px;
 	}
 #navbar-contact{
-	font-family: noto serif italic;
+	font-family: "Noto Serif";
+	font-weight: 400;
+	font-style: italic;
 	font-size: 11px;
 }
 
