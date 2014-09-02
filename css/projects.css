@@ -118,14 +118,20 @@ h2 {
 }
 
 .s-06 {
-	padding: 50px 0 50px 0;
+	padding: 80px 0 50px 0;
 }
 .s-system-pic {
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
-.s-00 {
+.s-07{
+	padding: 50px 0 50px 0;
+}
+.s-ui-pic {
+	padding: 0 0 10px 0;
+}
+.s-08 {
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -135,6 +141,15 @@ h2 {
 .s-loop {
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+.s-09 {
+	padding:50px 0 30px 0;
+}
+.s-process-title {
+	padding-bottom: 20px;
+}
+.s-process-pic {
+	padding: 50px 0 0 0;
 }
 /*Hitch Hiker*/
 /*hk-01*/
