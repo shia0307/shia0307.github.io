@@ -9,9 +9,9 @@ body {
 }
 
 #hello {
-	font-family: 'Noto Serif';
+	font-family: 'Noto Sans';
 	font-weight: 400;
-	font-size: 27px;
+	font-size: 30px;
 	color: #404040;
 	margin-bottom: 18px;
 }
