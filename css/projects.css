@@ -59,7 +59,21 @@ h2 {
 .video {
 	margin-top: 80px;
 }
-
+#bg-video {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+/*Skylark*/
+.sk-01 {
+	height: 600px;
+	overflow: hidden;
+}
+#overlay {
+	position: absolute;
+	top: 0px;
+	z-index: 10;
+}
 /*Stream*/
 .s-01 {
 	padding-top: 30px;
