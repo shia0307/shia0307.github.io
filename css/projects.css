@@ -59,21 +59,48 @@ h2 {
 .video {
 	margin-top: 80px;
 }
+
+/*Skylark*/
+.sk-01 {
+	width: 100vw;
+	height: 42.8vw;
+	overflow: hidden;
+}
+@media all and (max-width: 768px) {
+	.sk-01 {
+		margin-top: 50px;
+	}
+}
 #bg-video {
 	position: absolute;
 	top: 0px;
 	width: 100%;
 }
-/*Skylark*/
-.sk-01 {
-	height: 600px;
-	overflow: hidden;
-}
 #overlay {
 	position: absolute;
-	top: 0px;
+	top: -50px;
 	z-index: 10;
 }
+@media all and (max-width: 768px) {
+	#overlay {
+		top: 0px;
+	}
+}
+
+.sk-03 {
+	padding-bottom: 50px;
+}
+.skylark-problem-title {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.skylark-problem {
+	padding-bottom: 30px;
+}
+.skylark-gate-pic {
+	margin-bottom: 30px;
+}
+
 /*Stream*/
 .s-01 {
 	padding-top: 30px;
