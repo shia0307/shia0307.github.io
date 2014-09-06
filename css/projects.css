@@ -100,6 +100,103 @@ h2 {
 .skylark-gate-pic {
 	margin-bottom: 30px;
 }
+.sk-introduce {
+	padding: 50px 0 30px 0;
+}
+.sk-04 {
+	color: white;
+	padding-top: 100px;
+	padding-bottom: 110px;
+	background-image: url(../img/01-skylark/sk-vision.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100vm 50vm;
+}
+.sk-vision-title {
+	font-size: 50px;
+}
+.sk-vision {
+	font-size: 21px;
+}
+.sk-05 {
+	margin-bottom: 100px;
+}
+.sk-06 {
+	background-color: #7CB1B3;
+	color: white;
+	margin-bottom: 100px;
+}
+.skylark-system {
+	padding-top: 30px;
+}
+@media all and (max-width: 768px) {
+	.skylark-system {
+		padding-top: 0;
+		padding-bottom: 30px;
+	}
+}
+/*sk-07 princples*/
+.sk-principles{
+	padding-bottom: 50px;
+}
+.sk-prin-row {
+	margin-bottom: 100px;
+}
+.sk-top-padding {
+	padding-top:150px;
+}
+@media all and (max-width: 992px) {
+	.sk-top-padding {
+		padding-top: 50px;
+	}
+}
+@media all and (max-width: 768px) {
+	.sk-prin {
+		padding-bottom: 50px;
+	}
+}
+.sk-empower {
+	text-align: right;
+}
+.sk-contextual {
+	text-align: right;
+}
+.sk-airports{
+	text-align: right;
+}
+/*sk-08*/
+.sk-value {
+	margin-bottom: 30px;
+}
+.sk-08 {
+	margin-bottom: 50px;
+}
+.sk-09 {
+	margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Stream*/
 .s-01 {
