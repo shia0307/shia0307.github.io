@@ -115,6 +115,7 @@ h2 {
 .sk-vision-title {
 	font-size: 50px;
 }
+@madia 
 .sk-vision {
 	font-size: 21px;
 }
@@ -133,6 +134,7 @@ h2 {
 	.skylark-system {
 		padding-top: 0;
 		padding-bottom: 30px;
+		text-align: center;
 	}
 }
 /*sk-07 princples*/
@@ -151,9 +153,11 @@ h2 {
 @media all and (max-width: 992px) {
 	.sk-top-padding {
 		padding-top: 30px;
+		text-align: center;
 	}
 	.sk-top-padding2 {
 		padding-top: 30px;
+		text-align: center;
 	}
 }
 @media all and (max-width: 768px) {
@@ -178,7 +182,11 @@ h2 {
 .sk-airports{
 	text-align: right;
 }
-
+@media all and (max-width: 768px) {
+	.sk-airports {
+		text-align: left;
+	}
+}
 .sk-09 {
 	margin-top: 50px;
 }
