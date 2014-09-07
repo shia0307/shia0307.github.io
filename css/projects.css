@@ -145,9 +145,15 @@ h2 {
 .sk-top-padding {
 	padding-top:150px;
 }
+.sk-top-padding2 {
+	padding-top: 120px;
+}
 @media all and (max-width: 992px) {
 	.sk-top-padding {
-		padding-top: 50px;
+		padding-top: 30px;
+	}
+	.sk-top-padding2 {
+		padding-top: 30px;
 	}
 }
 @media all and (max-width: 768px) {
@@ -161,16 +167,18 @@ h2 {
 .sk-contextual {
 	text-align: right;
 }
-.sk-airports{
-	text-align: right;
-}
+
 /*sk-08*/
-.sk-value {
-	margin-bottom: 30px;
-}
 .sk-08 {
 	margin-bottom: 50px;
 }
+.sk-value {
+	margin-bottom: 50px;
+}
+.sk-airports{
+	text-align: right;
+}
+
 .sk-09 {
 	margin-top: 50px;
 }
