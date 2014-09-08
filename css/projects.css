@@ -433,7 +433,7 @@ h2 {
 }
 
 .nu-summary {
-	padding-top: 140px;
+	padding-top: 30px;
 	text-align: center;
 }
 .nu-summary>p {
@@ -442,16 +442,53 @@ h2 {
 	font-size: 18px;
 	padding-top: 10px;
 }
+.nu-pic {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
 
 .nu-03 {
 	padding-top: 30px;
 	padding-bottom: 50px;
 }
+.nu-04 {
+	margin: 50px 0 50px 0;
+}
+.nu-compete {
+	margin-top: -40px;
+}
 .nu-05 {
-	margin-top: 120px;
-	margin-bottom: 120px;
+	margin: 100px 0 100px 0;
 }
 .nu-06 {
-	margin-top: 120px;
-	margin-bottom: 120px;
+	margin-top: 200px;
+	margin-bottom: 150px;
+}
+.nu-07 {
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+.nu-08 {
+	margin: 50px 0 50px 0;
+}
+.nu-ideation {
+	padding: 30px 0 30px 0;
+}
+.nu-09 {
+	margin: 100px 0 100px 0;
+}
+.nu-icon {
+	padding: 50px 0 30px 0;
+}
+.nu-10 {
+	margin: 100px 0 100px 0;
+}
+.nu-interface {
+	padding-bottom: 30px;
+}
+.nu-11 {
+	margin: 100px 0 100px 0;
+}
+.nu-animation {
+	padding-bottom: 30px;
 }
