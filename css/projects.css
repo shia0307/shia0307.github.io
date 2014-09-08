@@ -80,10 +80,11 @@ h2 {
 	position: absolute;
 	top: -50px;
 	z-index: 10;
+	overflow: hidden;
 }
 @media all and (max-width: 768px) {
 	#overlay {
-		top: 0px;
+		top: 28px;
 	}
 }
 
@@ -188,28 +189,6 @@ h2 {
 .sk-09 {
 	margin-top: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*Stream*/
@@ -442,4 +421,37 @@ h2 {
 }
 .quote {
 	padding-top: 30px;
+}
+
+/*Nudesign*/
+.nu-01 {
+	padding-bottom: 70px;
+	background-image: url(../img/04-nudesign/nu-background2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+}
+
+.nu-summary {
+	padding-top: 140px;
+	text-align: center;
+}
+.nu-summary>p {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 18px;
+	padding-top: 10px;
+}
+
+.nu-03 {
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+.nu-05 {
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+.nu-06 {
+	margin-top: 120px;
+	margin-bottom: 120px;
 }
