@@ -425,7 +425,8 @@ h2 {
 
 /*Nudesign*/
 .nu-01 {
-	padding-bottom: 70px;
+	padding-top: 70px;
+	padding-bottom: 80px;
 	background-image: url(../img/04-nudesign/nu-background2.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -438,7 +439,7 @@ h2 {
 }
 
 .nu-summary {
-	padding-top: 30px;
+	padding-top: 50px;
 	text-align: center;
 }
 .nu-summary>p {
