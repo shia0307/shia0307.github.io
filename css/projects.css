@@ -431,6 +431,11 @@ h2 {
 	background-position: center;
 	color: white;
 }
+@media all and (max-width: 768px) {
+	.nu-01 {
+		padding-top: 100px;
+	}
+}
 
 .nu-summary {
 	padding-top: 30px;
@@ -457,12 +462,20 @@ h2 {
 .nu-compete {
 	margin-top: -40px;
 }
+@media all and (max-width: 768px) {
+	.nu-compete {
+		margin-top: 0;
+	}
+}
 .nu-05 {
 	margin: 100px 0 100px 0;
 }
 .nu-06 {
 	margin-top: 200px;
 	margin-bottom: 150px;
+}
+.nu-mobile-padding {
+	padding-bottom: 20px;
 }
 .nu-07 {
 	margin-top: 150px;
