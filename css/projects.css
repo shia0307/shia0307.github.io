@@ -289,7 +289,7 @@ h2 {
 	background-image: url(../img/03-hk/hk-background.png);
 }
 .hk-summary {
-	padding-top: 100px;
+	padding-top: 90px;
 	text-align: center;
 	color: white;
 }
@@ -505,4 +505,32 @@ h2 {
 }
 .nu-animation {
 	padding-bottom: 30px;
+}
+
+/*Find It!*/
+.f-01 {
+	padding-top: 70px;
+	padding-bottom: 80px;
+	background-image: url(../img/05-findit/f-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+}
+.f-04 {
+	padding-top: 100px;
+}
+.f-051 {
+	padding-top: 100px;
+}
+.f-053 {
+	padding-top: 100px;
+}
+.f-054 {
+	padding-top: 100px;
+}
+.f-055 {
+	padding-top: 100px;
+}
+.f-056 {
+	padding-top: 100px;
 }
