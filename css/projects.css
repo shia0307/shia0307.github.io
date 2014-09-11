@@ -534,3 +534,41 @@ h2 {
 .f-056 {
 	padding-top: 100px;
 }
+
+/*Fizzapron*/
+.fizz-01 {
+	padding-top: 70px;
+	padding-bottom: 80px;
+	background-image: url(../img/06-fizzapron/fizz-background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+}
+.nu-summary {
+	padding-top: 50px;
+	text-align: center;
+}
+.nu-summary>p {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 18px;
+	padding-top: 10px;
+}
+.fizz-04 {
+	margin-top: 100px;
+}
+.fizz-042 {
+	margin-top: 100px;
+}
+#goal2 {
+	visibility: hidden;
+}
+.fizz-05 {
+	margin-top: 100px;
+}
+.fizz-06 {
+	margin-top: 100px;
+}
+.fizz-07 {
+	margin-top: 100px;
+}
