@@ -454,7 +454,6 @@ h2 {
 }
 
 .nu-03 {
-	padding-top: 30px;
 	padding-bottom: 50px;
 }
 .nu-04 {
@@ -634,4 +633,20 @@ h2 {
 }
 .pen-too {
 	padding-bottom: 30px;
+}
+
+
+.portfolio-01 {
+	padding-top: 200px;
+	padding-bottom: 100px;
+	background-image: url(../img/07-portfolio/portfolio-background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+}
+.bottom-padding {
+	padding-bottom: 30px;
+}
+.portfolio-07 {
+	padding-top: 100px;
 }
