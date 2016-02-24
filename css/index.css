@@ -22,9 +22,19 @@ body {
 	font-size: 15px;
 	line-height: 23px;
 }
+#im em {
+	font-style: normal;
+	font-family: 'Open Sans';
+	font-weight: 300;
+}
+
 .mhcid-link{
 	text-decoration: none;
 	color: #FF53A0;
+}
+.groupon-link:hover {
+	text-decoration: none;
+	color: #B9E563;
 }
 .mhcid-link:hover {
 	text-decoration: none;
@@ -34,6 +44,7 @@ body {
 	margin-bottom: 10px;
 }
 .work-header {
+	margin-top: 40px;
 	margin-bottom: 30px;
 	margin-left: 10px;
 	border-left: solid 4px #B9E563;
@@ -42,7 +53,7 @@ body {
 #title {
 	font-family: 'Open Sans';
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 /*Caption Style*/
