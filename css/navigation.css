@@ -12,7 +12,7 @@
 /*navbar links padding bottom 15px>10px*/
 .navbar-nav>li>a{
 	font-style: normal;
-	font-family: 'Noto Sans';
+	font-family: 'Open Sans';
 	font-weight: 400;
 	padding-bottom: 12px;
 }
@@ -26,6 +26,8 @@
 /*Active link background style*/
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
 	background-color: rgba(255, 255, 255, 0);
+	font-family: 'Open Sans';
+	font-weight: 400;
 }
 
 
@@ -46,8 +48,9 @@
 
 @media all and (max-width: 1024px){
 	.navbar-default .navbar-nav>li>a {
-		margin: 0 10px 0 30px;
+		margin: 0 30px 0 30px;
 		padding: 15px 5px 12px 5px;
+		color: #75787B;
 	}
 	.nav.navbar-nav {
 		margin-left: 0px;
