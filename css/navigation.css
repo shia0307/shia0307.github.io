@@ -5,12 +5,13 @@
 
 /*navigation bar background color*/
 .navbar-default {
-	background-color: rgba(255, 255, 255, 0.9);
-	box-shadow: 0 1px 10px #EFEFEF;
+	background-color: #ffffff; 
+	border-bottom: 1px solid #f2f2f2;
 }
 
 /*navbar links padding bottom 15px>10px*/
 .navbar-nav>li>a{
+	font-style: normal;
 	font-family: 'Noto Sans';
 	font-weight: 400;
 	padding-bottom: 10px;
