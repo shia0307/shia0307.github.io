@@ -66,6 +66,8 @@ figure {
 
 figcaption { 
   font-size: 12px;
+  font-family: 'Open Sans';
+  font-weight: 400;
   position: absolute; 
   background: rgba(0,0,0,0.5); 
   color: white; 
