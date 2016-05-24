@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Mon May 23 2016 22:32:50 GMT+0000 (UTC) -->
+<html data-wf-site="572a2e887e99926e77141793" data-wf-page="572a2e887e99926e77141794">
+<head>
+  <meta charset="utf-8">
+  <title>Local Responsive Deal Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/local-responsive-deal-page.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+      }
+    });
+
+    $(document).ready(function() {
+      var s = $("#stick-option");
+      var pos = s.position(); 
+
+      var topHeight = $("#globalnav").outerHeight() + $("#breadcrumb").outerHeight() + $("#title").outerHeight();
+
+      var optionstoppoint = $("#option_box").outerHeight() + $("#wyg").outerHeight() + $("#wysk").outerHeight() - s.outerHeight();
+      console.log(optionstoppoint);
+
+      var stickermax = $(document).outerHeight() - $("#pagenav").outerHeight() - $("#map").outerHeight() - $("#about").outerHeight() - $("#review").outerHeight() - $("#qa").outerHeight() - $("#crosssale").outerHeight() - $("#footer").outerHeight() - s.outerHeight() - 200; //40 value is the total of the top and bottom margin
+      $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        //s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+        //if (windowpos >= pos.top && windowpos < stickermax) {
+        if (windowpos >= topHeight && windowpos < stickermax) {
+          //s.attr("style", ""); //kill absolute positioning
+          s.css({position: "fixed", top: 12 + "px"});
+          //s.addClass("stick"); //stick it
+          s.addClass("w-hidden-small w-hidden-tiny _5-column-lg percentage option1"); //stick it
+          console.log("stage1");
+          //console.log(pos.top);
+        } else if (windowpos >= stickermax) {
+          //s.removeClass("stick"); //un-stick
+          //s.addClass("w-hidden-small w-hidden-tiny _5-column-lg option1"); //stick it
+          s.css({position: "absolute", top: optionstoppoint + "px", zIndex: 100}); //set sticker right above the footer
+          s.removeClass("percentage");
+          console.log("stage2");
+          
+        } else {
+          //s.removeClass(); //top of page
+          s.addClass("w-hidden-small w-hidden-tiny _5-column-lg option1");
+          s.removeClass("percentage");
+          s.css({position: "absolute"});
+          console.log("stage3");
+        }
+      });
+      //alert(stickermax); //uncomment to show max sticker postition value on doc.ready
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+</head>
+<body class="background-color">
+  <div id="globalnav" class="w-section section-global-nav">
+    <div class="navbar-search">
+      <div class="container-flex">
+        <div class="row">
+          <div class="_2-column-lg _2-column-md _4-column-s"><img src="images/groupon_logo.svg" class="groupon-logo">
+          </div>
+          <div class="w-hidden-small w-hidden-tiny _6-column-lg _7-column-md">
+            <div class="seachbox">
+              <div class="search"><img width="20" height="20" src="images/search_icon.svg" class="search-icon">
+                <div class="searchbox-text">What are you looking for?</div>
+              </div>
+              <div class="w-hidden-medium w-hidden-small w-hidden-tiny location"><img src="images/location-marker.svg" class="location-marker">
+                <div class="searchbox-location">Palo Alto, CA</div>
+              </div>
+            </div>
+          </div>
+          <div class="_4-column-lg _3-column-md navbar-search-icons _4-column-s _5-column-xs">
+            <div class="w-hidden-medium w-hidden-small w-hidden-tiny my-stuff"><img src="images/user_avatar.png" class="user-avatar">
+              <div class="mystuff-text hi">Hi Shiya</div>
+              <div class="w-hidden-main mystuff-text">My Stuff</div><img src="images/profile_arrow.svg" class="mystuff-arrow">
+            </div>
+            <div class="w-hidden-main w-hidden-medium nav-button search"><img src="images/search-icon.svg" class="search-icon-mobile">
+            </div>
+            <div class="nav-button wish-list"><img src="images/heart_icon.png" class="wishlist-icon">
+            </div>
+            <div class="w-hidden-main w-hidden-medium nav-button search"><img src="images/sharing-icon-mobile.svg" class="search-icon-mobile">
+            </div>
+            <div class="w-hidden-small w-hidden-tiny nav-button notifications"><img src="images/notification_icon.png" class="notification-icon">
+            </div>
+            <div class="w-hidden-small w-hidden-tiny nav-button cart"><img src="images/Cart-icon.png" class="notification-icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny navbar-categories">
+      <div class="container-flex">
+        <div class="category-list">
+          <div class="category-list-text">Home</div>
+        </div>
+        <div class="category-list current-tab">
+          <div class="category-list-text">Local</div>
+        </div>
+        <div class="category-list">
+          <div class="category-list-text">Goods</div>
+        </div>
+        <div class="category-list">
+          <div class="category-list-text">Getaways</div>
+        </div>
+        <div class="category-list">
+          <div class="category-list-text">Clearance</div>
+        </div>
+        <div class="category-list">
+          <div class="category-list-text">Coupons</div>
+        </div>
+        <div class="category-list">
+          <div class="category-list-text">Discover Your City</div>
+        </div>
+      </div>
+    </div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny navbar-categories navbar-tabs">
+      <div class="container-flex">
+        <div class="category-list">
+          <div class="category-list-text new-tabs-text">Home</div>
+        </div>
+        <div class="category-list">
+          <div class="category-list-text new-tabs-text">Categories</div>
+        </div>
+        <div class="category-list">
+          <div class="category-list-text new-tabs-text">My Stuff</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="breadcrumb" class="w-section w-hidden-medium w-hidden-small w-hidden-tiny section-breadcrumb">
+    <div class="container-flex">
+      <div class="_12-column-lg">
+        <div class="breadcrumb">Local &gt; Food &amp; Drinks &gt; Beer, Wine &amp; Spirits &gt; Beer Tasting</div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section section-deal">
+    <div id="title" class="container _2">
+      <div class="_12-column-lg">
+        <h1 class="deal-title">Up to 48% Off Craft-Beer Tasting</h1>
+      </div>
+      <div class="_12-column-lg deal-meta">
+        <div class="deal-title-merchant">Beermiscuous • Palo Alto, CA • Craft Beer • $$</div>
+        <div class="deal-highlight">
+          <div class="highlight-tile"><img src="images/clock.svg" class="clock-icon">
+            <div class="deal-title-merchant">Ends in 6 Days</div>
+          </div>
+          <div class="highlight-tile"><img src="images/map-icon.svg" class="map-icon">
+            <div class="deal-title-merchant">5 Locations</div>
+          </div>
+          <div class="highlight-tile"><img src="images/star-large.png" class="meta-stars">
+            <div class="deal-title-merchant">72 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="option_box" class="container _1 remove-container-bottom">
+      <div class="row align-top">
+        <div class="_7-column-lg _12-column-s remove-column-padding remove-container-bottom"><img width="100%" src="images/Hero Image.png" class="hero-image">
+        </div>
+        <div id="stick-option" class="w-hidden-small w-hidden-tiny _5-column-lg option1">
+          <div class="option-list"><img src="images/radio-button selected.png" class="radio-button-selected">
+            <div class="option-content">
+              <h3 class="option-title">Weekdays Only, Beer Tasting for Two&nbsp;</h3>
+              <div class="option-price-and-text">
+                <div class="option-line">
+                  <div class="meta white-text">300+ Bought</div>
+                  <div class="strike-price">$28</div>
+                </div>
+                <div class="option-line">
+                  <div class="meta">300+ Bought</div>
+                  <div class="price">$24</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="option-list"><img src="images/radio-button-unselected.png" class="radio-button-selected">
+            <div class="option-content">
+              <h3 class="option-title">Weekdays Only, Beer Tasting for Four</h3>
+              <div class="option-price-and-text">
+                <div class="option-line">
+                  <div class="meta white-text">300+ Bought</div>
+                  <div class="strike-price">$68</div>
+                </div>
+                <div class="option-line">
+                  <div class="meta">300+ Bought</div>
+                  <div class="price">$47</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ctas"><a href="#" class="w-button buy">Buy</a><a href="#" class="w-button gifting">Give as a Gift</a>
+          </div>
+          <div class="sharing">
+            <div class="body-text">Share This Deal</div>
+            <div><img src="images/fb.png" class="sharing-method"><img src="images/twitter.png" class="sharing-method"><img src="images/g+.png" class="sharing-method"><img src="images/link.png" class="sharing-method">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-hidden-main w-hidden-medium container option2">
+      <div class="w-hidden-main row">
+        <div class="_7-column-lg _12-column-md">
+          <div class="option-list"><img src="images/radio-button selected.png" class="radio-button-selected">
+            <div class="option-content">
+              <h3 class="option-title">Weekdays Only, Beer Tasting for Two&nbsp;</h3>
+              <div class="option-price-and-text">
+                <div class="option-line">
+                  <div class="meta white-text">300+ Bought</div>
+                  <div class="strike-price">$28</div>
+                </div>
+                <div class="option-line">
+                  <div class="meta">300+ Bought</div>
+                  <div class="price">$24</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="option-list"><img src="images/radio-button-unselected.png" class="radio-button-selected">
+            <div class="option-content">
+              <h3 class="option-title">Weekdays Only, Beer Tasting for Four</h3>
+              <div class="option-price-and-text">
+                <div class="option-line">
+                  <div class="meta white-text">300+ Bought</div>
+                  <div class="strike-price">$68</div>
+                </div>
+                <div class="option-line">
+                  <div class="meta">300+ Bought</div>
+                  <div class="price">$47</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ctas"><a href="#" class="w-button buy">Buy</a><a href="#" class="w-button gifting">Give as a Gift</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="wyg" class="container">
+      <div class="row">
+        <div class="_7-column-lg _12-column-s">
+          <div class="section-title-box">
+            <h2 class="section-title">What You'll Get</h2>
+          </div>
+          <p class="body-text">Each person receives the following:
+            <br>• One flight of four draft beers (4 ounces each)
+            <br>• One full draft-beer pour</p>
+        </div>
+      </div>
+    </div>
+    <div id="wysk" class="container">
+      <div class="row">
+        <div class="_7-column-lg _12-column-s">
+          <div class="section-title-box">
+            <h2 class="section-title">Things You Should Know</h2>
+          </div>
+          <div class="w-richtext paragraph">
+            <h4>Restrictions</h4>
+            <p>• Limit 1 per person, may buy 1 additional as gift
+            </p>
+            <p>• Limit 1 per visit, Limit 1 per table</p>
+            <p>• Limit 1 per group, per day.</p>
+            <p>• Valid only for option &nbsp;</p>
+          </div>
+          <div class="w-richtext paragraph">
+            <h4>How to Use Your Groupon</h4>
+            <p>• Promotional value expires 120 days after purchase. Amount paid never expires.</p>
+          </div>
+          <div class="w-richtext paragraph">
+            <h4>Legal and Policies</h4>
+            <p>• Merchant is solely responsible to purchasers for the care and quality of the advertised goods and services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pagenav" class="w-section w-hidden-small w-hidden-tiny section-pagenav">
+    <div class="container-flex page-nav">
+      <div class="category-list">
+        <div class="category-list-text">Photos</div>
+      </div>
+      <div class="category-list">
+        <div class="category-list-text">About This Deal</div>
+      </div>
+      <div class="category-list current-tab">
+        <div class="category-list-text category-list">Map</div>
+      </div>
+      <div class="category-list">
+        <div class="category-list-text">About Merchant</div>
+      </div>
+      <div class="category-list">
+        <div class="category-list-text">Q&amp;A</div>
+      </div>
+    </div>
+  </div>
+  <div id="map" class="w-section section-map">
+    <div class="map">
+      <div class="w-hidden-main w-hidden-medium row">
+        <div class="_7-column-lg _12-column-s remove-container-bottom">
+          <div class="section-title-box map">
+            <h2 class="section-title remove-bottom-line">Map <span class="meta">2 Locations</span></h2>
+          </div>
+        </div>
+      </div><img src="images/map.png" class="map-image">
+      <div class="container-flex map-merchant-card">
+        <div class="row map-overlay">
+          <div class="_5-column-lg _6-column-md _12-column-s">
+            <div data-animation="slide" data-duration="500" data-infinite="1" class="w-slider merchant-card-widget">
+              <div class="w-slider-mask merchantcard-mask">
+                <div class="w-slide merchantcard"><img src="images/merchantcard-image.png" class="w-hidden-medium w-hidden-small w-hidden-tiny">
+                  <h4 class="merchantcard-name">Beermiscuous, Lincoln</h4>
+                  <div class="w-hidden-small w-hidden-tiny merchantcard-review"><img src="images/star-large.png" class="meta-stars merchantcard-image">
+                    <div class="merchantcard-text"><a href="#review">72 Reviews</a>
+                    </div>
+                  </div>
+                  <div class="merchant-content"><img src="images/merchant-address-icon.svg" class="w-hidden-small w-hidden-tiny merchant-content-icon">
+                    <div class="merchantcard-group">
+                      <div class="merchantcard-text">2812 N Lincoln Ave, Chicago, IL 60657</div><a href="#" class="w-hidden-small w-hidden-tiny get-direction">Get Directions</a>
+                    </div>
+                  </div>
+                  <div class="w-hidden-small w-hidden-tiny merchant-content"><img src="images/clock.svg" class="merchant-content-icon">
+                    <div class="merchantcard-group">
+                      <div class="open-hours">
+                        <div class="merchantcard-text">1:00 PM - 11:00 PM</div>
+                        <div class="merchantcard-text open-now"><strong>•</strong> Open Now</div>
+                      </div><a href="#" class="get-direction">See All Hours</a>
+                    </div>
+                  </div>
+                  <div class="w-hidden-small w-hidden-tiny merchant-content"><img src="images/merchant-number.svg" class="merchant-content-icon">
+                    <div>
+                      <div class="merchantcard-text">855-450-2337</div>
+                    </div>
+                  </div>
+                  <div class="w-hidden-small w-hidden-tiny merchant-content"><img src="images/merchant-website.svg" class="merchant-content-icon">
+                    <div><a href="#" class="get-direction">View Website</a>
+                    </div>
+                  </div>
+                  <div class="w-hidden-main w-hidden-medium get-directions"><img src="images/directions-icon.svg" class="w-hidden-main w-hidden-medium directions-icon">
+                    <div class="miles meta">1.2 mi</div>
+                  </div>
+                </div>
+                <div class="w-slide merchantcard"><img src="images/merchantcard-image.png" class="w-hidden-medium w-hidden-small w-hidden-tiny">
+                  <h4 class="merchantcard-name">Beermiscuous, Lincoln</h4>
+                  <div class="w-hidden-small w-hidden-tiny merchantcard-review"><img src="images/star-large.png" class="meta-stars merchantcard-image">
+                    <div class="merchantcard-text"><a href="#review">72 Reviews</a>
+                    </div>
+                  </div>
+                  <div class="merchant-content"><img src="images/merchant-address-icon.svg" class="w-hidden-small w-hidden-tiny merchant-content-icon">
+                    <div class="merchantcard-group">
+                      <div class="merchantcard-text">2812 N Lincoln Ave, Chicago, IL 60657</div><a href="#" class="w-hidden-small w-hidden-tiny get-direction">Get Directions</a>
+                    </div>
+                  </div>
+                  <div class="w-hidden-small w-hidden-tiny merchant-content"><img src="images/clock.svg" class="merchant-content-icon">
+                    <div class="merchantcard-group">
+                      <div class="open-hours">
+                        <div class="merchantcard-text">1:00 PM - 11:00 PM</div>
+                        <div class="merchantcard-text open-now"><strong>•</strong> Open Now</div>
+                      </div><a href="#" class="get-direction">See All Hours</a>
+                    </div>
+                  </div>
+                  <div class="w-hidden-small w-hidden-tiny merchant-content"><img src="images/merchant-number.svg" class="merchant-content-icon">
+                    <div>
+                      <div class="merchantcard-text">855-450-2337</div>
+                    </div>
+                  </div>
+                  <div class="w-hidden-small w-hidden-tiny merchant-content"><img src="images/merchant-website.svg" class="merchant-content-icon">
+                    <div><a href="#" class="get-direction">View Website</a>
+                    </div>
+                  </div>
+                  <div class="get-directions"><img src="images/directions-icon.svg" class="w-hidden-main w-hidden-medium directions-icon">
+                    <div class="w-hidden-main w-hidden-medium miles meta">1.2 mi</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-slider-arrow-left w-hidden-small w-hidden-tiny crosssale-left-arrow"><img src="images/arrow-left.svg" class="arrow-control-left">
+              </div>
+              <div class="w-slider-arrow-right w-hidden-small w-hidden-tiny crosssale-right-arrow"><img src="images/arrow-right.svg" class="arrow-control-right">
+              </div>
+              <div class="w-slider-nav w-round display-none"></div>
+            </div>
+          </div>
+          <div class="_7-column-lg map-pins _6-column-md _12-column-s"><img src="images/Current Location.svg" class="user-location"><img src="images/selected-merchant.svg" class="selected-pin">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="about" class="w-section section-about">
+    <div class="container">
+      <div class="row">
+        <div class="_9-column-lg _12-column-md">
+          <div class="section-title-box section-title-large">
+            <h2 class="section-title">About Beermiscuous</h2>
+            <div class="w-richtext paragraph">
+              <p>If a café and a brewery had a love child, it would probably look a lot like Beermiscuous. The Lakeview joint serves beers from more than 30 Chicagoland breweries in a setting that feels more like a cozy coffee shop than a bar. Beeristas certified by the&nbsp;Cicerone Certification Program&nbsp;present pours in the warmly lit space lined with natural wood, taking care to maintain ideal serving temperatures and use proper glassware. Free WiFi and a friendly outside-food policy are the icing on the beer-soaked cake, making Beermiscuous a favorite for first dates and solo excursions alike.</p>
+            </div>
+            <div class="w-richtext paragraph">
+              <h4>This Merchant Also Appears in</h4>
+              <p><em>"Beermiscuous is less about nerd bait and more about diversity and accessibility—presumably an effort to coax casual drinkers into leaving their comfort zones and exploring."</em><em style="color: rgb(0, 147, 234); font-size: 0.875em; line-height: 22px;">- Chicago Reader</em>
+              </p>
+              <p><em>"A place for craft beer fans to chill coffee shop-style or pick up a myriad mix-and-match beers to go."</em>
+              </p>
+              <p><em>- Chicago Reader</em>
+              </p>
+            </div>
+          </div>
+          <div class="see-all-review-button"><a href="#" class="w-button _2nd-button">Learn More About Beermiscuous</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="review" class="w-section section-review">
+    <div class="container">
+      <div class="row">
+        <div class="_9-column-lg _12-column-md">
+          <div class="section-title-box section-title-large">
+            <h2 class="section-title">Customer Reviews</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row review-top">
+        <div class="w-hidden-small w-hidden-tiny _1-column-lg">
+          <div class="placeholder">This is&nbsp;</div>
+        </div>
+        <div class="_3-column-lg _12-column-s">
+          <div class="review-summary">
+            <div class="rating-large">4.2</div><img src="images/star-large.png" class="stars-large">
+            <div class="average-review">Average of 72 Reviews</div>
+          </div>
+        </div>
+        <div class="_4-column-lg _7-column-md _12-column-s">
+          <div class="review-breakdown">
+            <div class="star-bar"><img width="100%" height="100%" src="images/5 stars.png" class="stars"><img src="images/5 star bar.png" class="bar">
+              <div class="breakdown-number">58</div>
+            </div>
+            <div class="star-bar"><img height="100%" src="images/4 stars.png" class="stars"><img src="images/4 star bar.png" class="bar">
+              <div class="breakdown-number">12</div>
+            </div>
+            <div class="star-bar"><img height="100%" src="images/3 stars.png" class="stars"><img src="images/3 star bar.png" class="bar">
+              <div class="breakdown-number">8</div>
+            </div>
+            <div class="star-bar"><img height="100%" src="images/2 stars.png" class="stars"><img src="images/3 star bar.png" class="bar">
+              <div class="breakdown-number">2</div>
+            </div>
+            <div class="star-bar"><img height="100%" src="images/1 star.png" class="stars"><img src="images/1 star bar.png" class="bar">
+              <div class="breakdown-number">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-hidden-small w-hidden-tiny _4-column-lg _1-column-md">
+          <div class="placeholder">This is&nbsp;</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="_9-column-lg _12-column-md">
+          <div class="gists">
+            <div class="gist-selected">All</div>
+            <div class="gist-unselected">Service</div>
+            <div class="gist-unselected">Magaritas</div>
+            <div class="gist-unselected">Strong Coffee</div>
+            <div class="gist-unselected">Pizza</div>
+            <div class="gist-unselected">Outdoor</div>
+            <div class="gist-unselected">Chicken</div>
+            <div class="gist-unselected">Salad</div>
+            <div class="gist-unselected">Beer Flight</div>
+            <div class="gist-negative">Dining Experience</div>
+            <div class="gist-negative">Coffee</div>
+            <div class="gist-negative">Chairs</div>
+          </div>
+        </div>
+      </div>
+      <div class="row individual-review remove-top-margin">
+        <div class="w-hidden-small w-hidden-tiny _1-column-lg"><img src="images/avatar 1.png" class="profile-pic">
+        </div>
+        <div class="_8-column-lg _11-column-md _12-column-s">
+          <div class="review-meta">
+            <div class="review-name"><img src="images/5 stars.png" class="stars">
+              <div class="meta">David.H</div>
+            </div>
+            <div class="meta-rightalign">Just Now</div>
+          </div>
+          <div class="w-richtext review-content">
+            <p>The service here is great, very friendly and accommodating. Hip, familiar, Great company. Good Music and food.</p>
+          </div>
+          <div class="w-container review-pics"><img src="images/review-pic 1.png" class="review-pic"><img src="images/review-pic 2.png" class="review-pic"><img src="images/review-pic 3.png" class="review-pic">
+          </div>
+          <div class="helpful-selected">Helpful (34)</div>
+        </div>
+      </div>
+      <div class="row individual-review">
+        <div class="w-hidden-small w-hidden-tiny _1-column-lg"><img src="images/avatar 2.png" class="profile-pic">
+        </div>
+        <div class="_8-column-lg _11-column-md _12-column-s">
+          <div class="review-meta">
+            <div class="review-name"><img src="images/4 stars.png" class="stars">
+              <div class="meta">Logan. M</div>
+            </div>
+            <div class="meta-rightalign">5 Days Ago</div>
+          </div>
+          <div class="w-richtext review-content">
+            <p>I loved this place! I used a groupon for the beer tasting for two. I just bought another one because this place is really cool. I accidentally ordered the wrong beer for my full pour and they replaced it for me for no extra charge. There's free wifi and it's like a cafe experience. I sat next to a fireplace in some cushioned chairs. Highly recommend this for people who like beer and good company.</p>
+          </div>
+          <div class="w-container review-pics"><img src="images/review-pic 1.png" class="review-pic"><img src="images/review-pic 2.png" class="review-pic"><img src="images/review-pic 3.png" class="review-pic">
+          </div>
+          <div class="helpful-selected">Helpful (18)</div>
+        </div>
+      </div>
+      <div class="row individual-review">
+        <div class="w-hidden-small w-hidden-tiny _1-column-lg"><img src="images/avatar5.png" class="profile-pic">
+        </div>
+        <div class="_8-column-lg _11-column-md _12-column-s">
+          <div class="review-meta">
+            <div class="review-name"><img src="images/3 stars.png" class="stars">
+              <div class="meta">Elena F</div>
+            </div>
+            <div class="meta-rightalign">A Week Ago</div>
+          </div>
+          <div class="w-richtext review-content">
+            <p>The service here is great, very friendly and accommodating. Nice, quaint place, good music.</p>
+          </div>
+          <div class="helpful-unselected">Helpful (15)</div>
+        </div>
+      </div>
+      <div class="row individual-review">
+        <div class="w-hidden-small w-hidden-tiny _1-column-lg"><img src="images/avatar 4.png" class="profile-pic">
+        </div>
+        <div class="_8-column-lg _11-column-md _12-column-s">
+          <div class="review-meta">
+            <div class="review-name"><img src="images/2 stars.png" class="stars">
+              <div class="meta">Anna S</div>
+            </div>
+            <div class="meta-rightalign">4/25/2016</div>
+          </div>
+          <div class="w-richtext review-content">
+            <p>I expected more from the service, but yeah it was okay I guess…</p>
+          </div>
+          <div class="helpful-unselected">Helpful (15)</div>
+        </div>
+      </div>
+      <div class="row individual-review">
+        <div class="w-hidden-small w-hidden-tiny _1-column-lg"><img src="images/avatar5.png" class="profile-pic">
+        </div>
+        <div class="_8-column-lg clear-bottom-line _11-column-md _12-column-s">
+          <div class="review-meta">
+            <div class="review-name"><img src="images/4 stars.png" class="stars">
+              <div class="meta">Edith B</div>
+            </div>
+            <div class="meta-rightalign">2/12/2016</div>
+          </div>
+          <div class="w-richtext review-content">
+            <p>Friendly staff greets you when you walk in and also helps you select your pours. &nbsp;They are very informative and were happy to explain the flavors and favorite picks. &nbsp;I came with my friend to catch up over some beer sampling. &nbsp;We used the Groupon for the beer tasting for two- four 2 oz pours with a full pour at the end.&nbsp;
+            </p>
+            <p>Loved it and will be back again! Oh, and Wednesday is half off flight night!</p>
+          </div>
+          <div class="helpful-unselected">Helpful (12)</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="_9-column-lg _12-column-md">
+          <div class="see-all-review-button remove-top-margin"><a href="#" class="w-button _2nd-button">Read All 72 Reviews</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="qa" class="w-section section-qa">
+    <div class="container">
+      <div class="row">
+        <div class="_9-column-lg _12-column-md">
+          <div class="section-title-box section-title-large">
+            <h2 class="section-title">Questions and Answers</h2>
+          </div>
+          <div class="question"><a href="#" data-ix="hide-and-show-1" class="w-inline-block link1"><h4 data-ix="flip1" class="question-link1">It states groupon for 4, do we have to have 4 or can it be used for just 2 people at lunch?</h4><img src="images/qa-arrow.svg" class="arrow1"></a>
+            <div class="meta"><span class="text-hightlight"><span></span></span><span class="text-hightlight">3 answers,</span> last answered by Beermiscuous on Feb 25, 2015</div>
+            <div data-ix="hide-on-load" class="answer1">
+              <div class="answer"><img src="images/groupon cs.png" class="groupon-cs">
+                <div class="answer-content">
+                  <div class="body-text answer-text">You need at least 4 people in your party to redeem the 4 person option.</div>
+                  <div class="meta answer-merchant">Sammy T.&nbsp;from Groupon replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-selected">Helpful (34)</div>
+                </div>
+              </div>
+              <div class="answer"><img src="images/merchant icon.png" class="merchant-icon">
+                <div class="answer-content">
+                  <div class="body-text answer-text">We welcome a party of 2 to use the Groupon for 4.</div>
+                  <div class="meta answer-merchant">Beermiscuous replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-unselected">Helpful (5)</div>
+                </div>
+              </div>
+              <div class="answer"><img src="images/customer icon.png" class="user-icon">
+                <div class="answer-content">
+                  <div class="body-text answer-text">I used the 4 person option with my girlfriend, and they are fine with it.</div>
+                  <div class="meta answer-merchant">Joe M. replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-unselected">Helpful (3)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question"><a href="#" data-ix="hide-and-show-2" class="w-inline-block link2"><h4 data-ix="flip2" class="question-link2">What happens after this promotional date is up?</h4><img src="images/qa-arrow.svg" class="arrow2"></a>
+            <div class="meta"><span class="text-hightlight"><span></span></span><span class="text-hightlight">3 answers,</span> last answered by Beermiscuous on Feb 25, 2015</div>
+            <div data-ix="hide-on-load" class="answer2">
+              <div class="answer"><img src="images/groupon cs.png" class="groupon-cs">
+                <div class="answer-content">
+                  <div class="body-text answer-text">Promotional value expire on this date, but paid amount never expire, you can still use that with merchant.</div>
+                  <div class="meta answer-merchant">Sammy T.&nbsp;from Groupon replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-selected">Helpful (34)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question"><a href="#" data-ix="hide-and-show-3" class="w-inline-block link3"><h4 data-ix="flip3" class="question-link3">Is this valid for food only for also wine/beer/booze?</h4><img src="images/qa-arrow.svg" class="arrow3"></a>
+            <div class="meta"><span class="text-hightlight"><span></span></span><span class="text-hightlight">3 answers,</span> last answered by Beermiscuous on Feb 25, 2015</div>
+            <div data-ix="hide-on-load" class="answer3">
+              <div class="answer"><img src="images/merchant icon.png" class="merchant-icon">
+                <div class="answer-content">
+                  <div class="body-text answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  <div class="meta answer-merchant">Beermiscuous replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-unselected">Helpful (5)</div>
+                </div>
+              </div>
+              <div class="answer"><img src="images/customer icon.png" class="user-icon">
+                <div class="answer-content">
+                  <div class="body-text answer-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                  <div class="meta answer-merchant">Joe M. replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-unselected">Helpful (3)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question"><a href="#" data-ix="hide-and-show-4" class="w-inline-block link4"><h4 data-ix="flip4" class="question-link4">Can I buy the "for Four" deal and only have two people present?</h4><img src="images/qa-arrow.svg" class="arrow4"></a>
+            <div class="meta"><span class="text-hightlight"><span></span></span><span class="text-hightlight">3 answers,</span> last answered by Beermiscuous on Feb 25, 2015</div>
+            <div data-ix="hide-on-load" class="answer4">
+              <div class="answer"><img src="images/groupon cs.png" class="groupon-cs">
+                <div class="answer-content">
+                  <div class="body-text answer-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                  <div class="meta answer-merchant">Sammy T.&nbsp;from Groupon replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-selected">Helpful (34)</div>
+                </div>
+              </div>
+              <div class="answer"><img src="images/merchant icon.png" class="merchant-icon">
+                <div class="answer-content">
+                  <div class="body-text answer-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  <div class="meta answer-merchant">Beermiscuous replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-unselected">Helpful (5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question"><a href="#" data-ix="hide-and-show-5" class="w-inline-block link5"><h4 data-ix="flip5" class="question-link5">Are animals allowed?</h4><img src="images/qa-arrow.svg" class="arrow5"></a>
+            <div class="meta"><span class="text-hightlight"><span></span></span><span class="text-hightlight">3 answers,</span> last answered by Beermiscuous on Feb 25, 2015</div>
+            <div data-ix="hide-on-load" class="answer5">
+              <div class="answer"><img src="images/merchant icon.png" class="merchant-icon">
+                <div class="answer-content">
+                  <div class="body-text answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                  <div class="meta answer-merchant">Beermiscuous replied on&nbsp;Oct 29, 2015</div>
+                  <div class="helpful-unselected">Helpful (5)</div>
+                </div>
+              </div>
+            </div>
+          </div><a href="#" class="w-button _2nd-button">Read All 12 Questions and Answers</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="crosssale" class="w-section section-crosssale">
+    <div class="container remove-container-background">
+      <div class="section-title-box section-title-large">
+        <h2 class="section-title widget-title">You May Also Like</h2>
+      </div>
+    </div>
+    <div data-animation="slide" data-duration="500" data-infinite="1" data-nav-spacing="4" class="w-slider crosssale">
+      <div class="w-slider-mask slide-mask">
+        <div class="w-slide crosssale-card"><img src="images/card-image1.png" class="card-image">
+          <h3 class="card-title">Donec facilisis tortor ut augue lacinia</h3>
+          <div class="meta meta-in-card">San Francisco</div>
+          <div class="strike-price card-strike">$28</div>
+          <div class="price card-price">$30</div>
+        </div>
+        <div class="w-slide crosssale-card"><img src="images/card-image4.png" class="card-image">
+          <h3 class="card-title">Donec facilisis tortor ut augue lacinia</h3>
+          <div class="meta meta-in-card">San Francisco</div>
+          <div class="strike-price card-strike">$50</div>
+          <div class="price card-price">$25</div>
+        </div>
+        <div class="w-slide crosssale-card"><img src="images/card-image3.png" class="card-image">
+          <h3 class="card-title">Donec facilisis tortor ut augue lacinia</h3>
+          <div class="meta meta-in-card">San Francisco</div>
+          <div class="strike-price card-strike">$299</div>
+          <div class="price card-price">$199</div>
+        </div>
+        <div class="w-slide crosssale-card"><img src="images/card-image2.png" class="card-image">
+          <h3 class="card-title">Donec facilisis tortor ut augue lacinia</h3>
+          <div class="meta meta-in-card">San Francisco</div>
+          <div class="strike-price card-strike">$1,099</div>
+          <div class="price card-price">$899</div>
+        </div>
+        <div class="w-slide crosssale-card"><img src="images/card-image3.png" class="card-image">
+          <h3 class="card-title">Donec facilisis tortor ut augue lacinia</h3>
+          <div class="meta meta-in-card">San Francisco</div>
+          <div class="strike-price card-strike">$1,099</div>
+          <div class="price card-price">$899</div>
+        </div>
+        <div class="w-slide crosssale-card"><img src="images/card-image2.png" class="card-image">
+          <h3 class="card-title">Donec facilisis tortor ut augue lacinia</h3>
+          <div class="meta meta-in-card">San Francisco</div>
+          <div class="strike-price card-strike">$1,099</div>
+          <div class="price card-price">$899</div>
+        </div>
+        <div class="w-slide crosssale-card"><img src="images/card-image1.png" class="card-image">
+          <h3 class="card-title">Donec facilisis tortor ut augue lacinia</h3>
+          <div class="meta meta-in-card">San Francisco</div>
+          <div class="strike-price card-strike">$1,099</div>
+          <div class="price card-price">$899</div>
+        </div>
+        <div class="w-slide crosssale-card"><img src="images/card-image4.png" class="card-image">
+          <h3 class="card-title">Donec facilisis tortor ut augue lacinia</h3>
+          <div class="meta meta-in-card">San Francisco</div>
+          <div class="strike-price card-strike">$1,099</div>
+          <div class="price card-price">$899</div>
+        </div>
+      </div>
+      <div class="w-slider-arrow-left w-hidden-small w-hidden-tiny crosssale-left-arrow"><img src="images/arrow-left.svg" class="arrow-control-left">
+      </div>
+      <div class="w-slider-arrow-right w-hidden-small w-hidden-tiny crosssale-right-arrow"><img width="10" src="images/arrow-right.svg" class="arrow-control-right">
+      </div>
+      <div class="w-slider-nav w-slider-nav-invert w-shadow w-round crosssale-nav"></div>
+    </div>
+  </div>
+  <div id="footer" class="w-section footer">
+    <div class="w-hidden-small w-hidden-tiny container">
+      <div class="row flex-top-align">
+        <div class="_3-column-lg">
+          <h4>Company</h4>
+          <p class="body-text footer-links">About Groupon
+            <br>Jobs
+            <br>Blog
+            <br>Press
+            <br>Investor Relations
+            <br>Management Team
+            <br>In Your Community</p>
+        </div>
+        <div class="_3-column-lg">
+          <h4>Work with Groupon</h4>
+          <p class="body-text footer-links">Join the Groupon
+            <br>Marketplace
+            <br>Run a Groupon Deal
+            <br>Learn More about Groupon
+            <br>Merchant Affiliate Program</p>
+        </div>
+        <div class="_3-column-lg">
+          <h4>More</h4>
+          <p class="body-text footer-links">Customer Support
+            <br>FAQ
+            <br>Coupons
+            <br>Gift Cards Gift
+            <br>Shop ideel
+            <br>Shop by Brand</p>
+        </div>
+        <div class="_3-column-lg"><img src="images/footer-app.png" class="footer-image"><img src="images/footer-merchant.png">
+        </div>
+      </div>
+    </div>
+    <div class="container remove-container-background">
+      <div class="footer-legal">© 2015 Groupon, Inc. All Rights Reserved.
+        <br><a href="#">Terms of Use&nbsp; Privacy Policy&nbsp; Licenses&nbsp; Responsible Disclosure</a>
+      </div>
+    </div>
+  </div>
+  <div class="w-section lg-collumns">
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _12-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _11-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _10-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _9-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _8-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _7-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _6-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _5-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _4-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _3-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _2-column-lg"></div>
+    <div class="w-hidden-medium w-hidden-small w-hidden-tiny _1-column-lg"></div>
+  </div>
+  <div class="w-section md-columns">
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _12-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _11-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _10-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _9-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _8-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _7-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _6-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _5-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _4-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _3-collumn-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _2-column-md"></div>
+    <div class="w-hidden-main w-hidden-small w-hidden-tiny _1-column-md"></div>
+  </div>
+  <div class="w-section s-columns">
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _12-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _11-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _10-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _9-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _8-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _7-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _6-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _5-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _4-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _3-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _2-column-s"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-tiny _1-column-s"></div>
+  </div>
+  <div class="w-section xs-columns">
+    <div class="w-hidden-main w-hidden-medium w-hidden-small _12-column-xs"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-small _6-column-xs"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-small _5-column-xs"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-small _4-column-xs"></div>
+    <div class="w-hidden-main w-hidden-medium w-hidden-small _3-column-xs"></div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
